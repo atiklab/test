@@ -1,0 +1,168 @@
+<html>
+<head>
+    <title>Calculator</title>
+</head>
+
+
+
+
+
+<style>
+
+
+ body
+{
+background-color:tan;
+} 
+.box
+{
+background-color:#3d4543;
+height:300px;
+width:100%;
+border-radius:10px;
+position:relative;
+top:0px;
+left:0%;
+} 
+.display
+{
+background-color:#222;
+width:95%;
+position:relative;
+left:2%;
+top:20px;
+height:60px;
+}
+.display input
+{
+position:relative;
+left:2px;
+top:2px;
+height:55px;
+width:99.7%;
+color:black;
+background-color:#bccd95;
+font-size:21px;
+text-align:right;
+} 
+.keys
+{
+position:relative;
+left:2%;
+top:10px;
+}
+.button {
+    position: relative;
+    background-color: #4CAF50;
+    border: none;
+    font-size: 12px;
+    color: #FFFFFF;
+    padding: 10px;
+    width: 23.25%;
+	height:42px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.2s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.button:after {
+    content: "";
+    background: #90EE90;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.6s
+}
+
+.button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+
+
+
+
+
+</style>
+
+
+
+<script>
+function c(val)
+{
+document.getElementById("d").value=val;
+}
+function v(val)
+{
+document.getElementById("d").value+=val;
+}
+function e() 
+{ 
+try 
+{ 
+  c(eval(document.getElementById("d").value)) 
+} 
+catch(e) 
+{
+  c('Error') 
+} 
+}  
+</script>
+
+<body>
+
+
+<div class="box">
+	<div class="display"><input type="text" readonly size="15" id="d"></div>
+	<div class="keys">
+	</p>
+		<button class="button" value="7" onclick='v("7")'>7</button>
+		<button class="button" value="8" onclick='v("8")'>8</button>
+		<button class="button" value="9" onclick='v("9")'>9</button>
+		<button class="button" value="/" onclick='v("/")'>/</button>
+		
+	
+		
+		<button class="button" value="4" onclick='v("4")'>4</button>
+		<button class="button" value="5" onclick='v("5")'>5</button>
+		<button class="button" value="6" onclick='v("6")'>6</button>
+		<button class="button" value="*" onclick='v("*")'>*</button>
+	
+		
+		<button class="button" value="1" onclick='v("1")'>1</button>
+		<button class="button" value="2" onclick='v("2")'>2</button>
+		<button class="button" value="3" onclick='v("3")'>3</button>
+		<button class="button" value="-" onclick='v("-")'>-</button>
+		
+	
+		
+		<button class="button" value="0" onclick='v("0")'>0</button>
+		<button class="button" value="." onclick='v(".")'>.</button>
+		<button class="button" value=" " onclick='c(" ")'>DEL</button>
+		<button class="button" value="+" onclick='v("+")'>+</button>
+		
+	
+			
+		<button class="button" value="=" onclick='e()'>!</button>
+		<button class="button" value="=" onclick='e()'>^</button>
+		<button class="button" value="=" onclick='e()'>=</button>
+		<button class="button" value="=" onclick='e()'>=</button>
+		
+		
+	</div>
+</div>
+
+
+
+</body> 
+</html>
